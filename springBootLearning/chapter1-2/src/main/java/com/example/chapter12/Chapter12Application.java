@@ -16,7 +16,8 @@ public class Chapter12Application {
     @RestController
     static class HelloController{
 
-        @Value("${name:}")
+        //这是去读取配置文件yaml文件里面的 属性为name的值，然后注入给string name，下面就可以使用
+        @Value("${name}")
         private String name;
 
         @RequestMapping("/")
